@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorThemePurpleLite">#c93d6e</color>
+    <color name="colorThemePurpleDark">#280a3c</color>
+    <color name="colorThemeWhite">#FFFFFF</color>
+    <color name="colorThemeBlack">#000000</color>
+    <color name="colorTextBlack">#666666</color>
+
+    <color name="floating_button_background">#a27eae</color>
+
+
+
+    <color name="edittext_background">#00000000</color>
+</resources>

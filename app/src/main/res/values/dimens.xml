@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<resources>
+
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="destination_source_cardview_height">100dp</dimen>
+    <dimen name="vehicle_details_cardview_height">150dp</dimen>
+    <dimen name="btn_type_1_hightwhite">50dp</dimen>
+
+
+    <dimen name="margin_extra_large">48dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_medium">24dp</dimen>
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_extra_small">4dp</dimen>
+
+    <dimen name="listview_image_hight_white">55dp</dimen>
+
+    <dimen name="view_width">0.5dp</dimen>
+
+
+
+
+</resources>

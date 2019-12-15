@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "990828586977",
+    "firebase_url": "https://slt-muve-48977.firebaseio.com",
+    "project_id": "slt-muve-48977",
+    "storage_bucket": "slt-muve-48977.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990828586977:android:f663e3a0d0b764f56214a0",
+        "android_client_info": {
+          "package_name": "com.project.himanshu.sltmuve"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "990828586977-gdcaoc2r73lde77ir62sk8qg7gboh7pr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.himanshu.sltmuve",
+            "certificate_hash": "17ef7fbb930b4f9b1acbcbd2cee294b5db800467"
+          }
+        },
+        {
+          "client_id": "990828586977-v0qjaq01t48k8v66b7nj6dt5fhc3m8ep.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCuRs7PV6Tz8yGTQeSCxnVVZbcjA1v_4DQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "990828586977-v0qjaq01t48k8v66b7nj6dt5fhc3m8ep.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

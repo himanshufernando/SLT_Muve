@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View"></import>
+
+        <variable
+            name="viemodel"
+            type="com.project.himanshu.sltmuve.viewmodels.LocationViewmodel" />
+        />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activitys.main.MainActivity">
+
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.main.MapsActivity" />
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_gps_fixed_white_24dp"
+            app:backgroundTint="@color/floating_button_background"
+            android:layout_marginRight="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/fab_margin"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/cardview_vtype"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:focusable="true"
+            android:clickable="true"/>
+
+        <androidx.cardview.widget.CardView
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/destination_source_cardview_height"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_large"
+            android:layout_marginRight="@dimen/margin_normal"
+            app:cardBackgroundColor="@color/colorThemeWhite"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintlayout_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_extra_small"
+                android:background="@color/colorThemeWhite"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/margin_extra_large"
+                    android:layout_height="match_parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:src="@drawable/ic_directions_car_24dp" />
+
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="@dimen/margin_extra_small"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/imageView2"
+                        android:layout_below="@+id/imageView1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/margin_extra_small"
+                        android:layout_marginBottom="@dimen/margin_extra_small"
+                        android:background="@color/colorThemePurpleLite" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:src="@drawable/ic_location_24dp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_extra_large"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="@dimen/margin_extra_large">
+
+                    <TextView
+                        android:id="@+id/textView_from"
+                        style="@style/EditTextHintTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_extra_small"
+                        android:text="@string/ride_from" />
+
+                    <EditText
+                        android:id="@+id/editText_from"
+                        style="@style/EditTextTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView_from"
+                        android:cursorVisible="false"
+                        android:ems="10"
+                        android:hint="@string/ride_from_hint"
+                        android:inputType="textPersonName" />
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_width"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="@dimen/margin_extra_small"
+                        android:layout_marginRight="@dimen/margin_extra_small"
+                        android:layout_marginBottom="@dimen/margin_extra_small"
+                        android:background="@color/colorThemeBlack" />
+
+                    <TextView
+                        android:id="@+id/textView_to"
+                        style="@style/EditTextHintTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/divider2"
+                        android:layout_marginTop="@dimen/margin_extra_small"
+                        android:text="@string/ride_to" />
+
+                    <EditText
+                        android:id="@+id/editText_to"
+                        style="@style/EditTextTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textView_to"
+                        android:ems="10"
+                        android:hint="@string/ride_to_hint"
+                        android:inputType="textPersonName" />
+
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_vtype"
+            style="@style/CardViewStyle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/vehicle_details_cardview_height"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_normal"
+            app:cardBackgroundColor="@color/colorThemeWhite"
+            app:layout_constraintBottom_toTopOf="@+id/relativelayout_book"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintlayout_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_extra_small"
+                android:background="@color/colorThemeWhite"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview_vehicletype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginBottom="@dimen/margin_large"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:listitem="@layout/list_vehicle_type" />
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/view_width"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_marginBottom="@dimen/margin_large"
+                    android:background="@color/colorThemeBlack"
+                    app:layout_constraintTop_toBottomOf="@+id/recyclerview_vehicletype" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_pickup_time_hint"
+                    style="@style/EditTextHintTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_extra_small"
+                    android:text="@string/pickup_time"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_pickup_time"
+                    style="@style/TitleTextV2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_extra_small"
+                    android:text="100 Min"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_pickup_time_hint" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_estimate_hint"
+                    style="@style/EditTextHintTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/margin_extra_small"
+                    android:text="@string/fare_estimate"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_estimate"
+                    style="@style/TitleTextV2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_extra_small"
+                    android:text="$84.63-114.49"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView_estimate_hint"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_estimate_hint" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_capacity_hint"
+                    style="@style/EditTextHintTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_extra_small"
+                    android:text="@string/capacity"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView_capacity"
+                    app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textView_capacity"
+                    style="@style/TitleTextV2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_extra_small"
+                    android:layout_marginEnd="@dimen/margin_normal"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:text="1-99 Pax"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView_capacity_hint" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <RelativeLayout
+            android:id="@+id/relativelayout_timeslote"
+            android:layout_width="@dimen/btn_type_1_hightwhite"
+            android:layout_height="@dimen/btn_type_1_hightwhite"
+            android:background="@color/colorThemePurpleDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/margin_small"
+                android:src="@drawable/ic_time_slot_24dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativelayout_book"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_type_1_hightwhite"
+            android:layout_marginStart="@dimen/btn_type_1_hightwhite"
+            android:layout_marginLeft="@dimen/btn_type_1_hightwhite"
+            android:background="@color/colorThemePurpleLite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/ActionTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/book_ride" />
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

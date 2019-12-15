@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">SLT Muve</string>
+
+
+
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core functionality.</string>
+
+    <string name="ok">OK</string>
+    <string name="settings">Settings</string>
+    <string name="remove_location_updates">Remove location updates</string>
+    <string name="location_updated">Location Updated: %1$s</string>
+
+    <string name="book_ride">BOOK A RIDE</string>
+    <string name="ride_from">FROM</string>
+    <string name="ride_to">TO</string>
+
+    <string name="ride_from_hint">Your location(Tap to change)</string>
+    <string name="ride_to_hint">Set a destination</string>
+    <string name="pickup_time">Pick-up Time</string>
+    <string name="fare_estimate">Fare Estimate</string>
+    <string name="capacity">Capacity</string>
+
+
+</resources>
